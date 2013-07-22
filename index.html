@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Palisades Painting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://web.mit.edu/user/s/a/saulopez/www/stylesheet.css" rel="stylesheet">
+
+    <style>
+			body {
+                padding-top: 4px;
+                padding-bottom: 50px;
+                max-width: 1300px;
+				margin-top: 3%;
+				}
+
+            /* Custom container */
+            .container {
+                margin: 0 auto;
+                max-width: 1000px;
+            }
+            .container > hr {
+                margin: 60px 0;
+            }
+            /*Palisades Painting*/
+            .jumbotron {
+                margin: 80px 0;
+                text-align: center;
+                margin-top: 40px;
+            }
+            .jumbotron h1 {
+                font-size: 100px;
+                line-height: 1;
+                padding-top: 16px;
+            }
+            .jumbotron .lead {
+                font-size: 24px;
+                line-height: 1.25;
+                margin-top: 20px;
+            }
+            .jumbotron .btn {
+                font-size: 21px;
+                padding: 14px 24px;
+                margin-bottom: 30px;
+            }
+            /* Supporting marketing content */
+            .marketing {
+                margin: 60px 0;
+            }
+            .marketing p + h4 {
+                margin-top: 28px;
+            }
+
+            /* Customize the navbar links to be fill the entire space of the .navbar */
+            .navbar .navbar-inner {
+                padding: 0;
+                margin-bottom: 40px;
+                display: block;
+                width: 100%;
+            }
+            .navbar .nav li a {
+                font-weight: bold;
+                border-left: 1px solid rgba(255, 255, 255, .75);
+                border-right: 1px solid rgba(0, 0, 0, .1);
+            }
+            .navbar .nav li:first-child a {
+                border-left: 0;
+                border-radius: 3px 0 0 3px;
+            }
+            .navbar .nav li:last-child a {
+                border-right: 0;
+                border-radius: 0 3px 3px 0;
+            }
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      background-color: #FAFAFA;
+      max-width: 1300px;
+    }
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 0 5% 0 5%; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette { 
+	  background-color: white;
+	  padding: 10px 10px 0 10px;
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+	  color: #01AB8E;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+	  z-index: 10;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        /*margin: -20px;*/
+      }
+
+      .carousel {
+        /*margin-left: -20px;
+        margin-right: -20px;*/
+      }
+      .carousel .container {
+		margin: 0 20% 0 20%;
+		z-index: 11;
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+    <body id=topcolor>
+               <div class="fluf navbar-fixed-top"><p>&nbsp;</p></div>
+                <div class="navbar navbar-fixed-top">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                             <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </a>
+<a class="brand" >&nbsp;&nbsp;Pali Painting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <!-- Everything you want hidden at 940px or less, place within here -->
+					<div class="nav-collapse collapse">
+                                <!-- .nav, .navbar-search, .navbar-form, etc -->
+                            <ul class="nav">
+                                <li class="divider-vertical"></li>
+                                <li class="active"><a href="http://web.mit.edu/user/s/a/saulopez/www/index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
+                                </li>
+                                <li><a href="http://web.mit.edu/user/s/a/saulopez/www/about.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <li><a href="http://web.mit.edu/user/s/a/saulopez/www/projects.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
+                                <li><a href="http://web.mit.edu/user/s/a/saulopez/www/contactalt.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
+                                </li>
+                                <li class="divider-vertical"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.navbar -->
+            </div>
+
+        <div id=topcolor class="container-fluid">
+            <div class="masthead">
+                 <h3 class="muted"></h3>
+
+            <!-- Jumbotron -->
+            <div id=background>
+                <div class="jumbotron borders">
+                     <h1><img id=logostyle  src="http://web.mit.edu/user/s/a/saulopez/Public/Pali2335.png" height="95%" width="95%"/><BR>
+                         <img id=logostyle  src="http://i.imgur.com/c5m4x2O.jpg" height="55%" width="55%"/></h1>
+
+                    <p id="lead" class="lead">Palisades・Malibu・Beverly Hills・ Studio City・Hermosa Beach・Santa Barbara</p> <a class="btn btn-large custom-btn" href="http://t1.gstatic.com/images?q=tbn:ANd9GcRQ3cuu4I6SBu2wcHGgVjRmHwvFpdu7FJ3Qvjp1Ti31koA4JNjb">Let's work together!</a>
+                </div>
+            </div>
+<div style="margin-top: -40px;">
+            <hr>
+            <!-- Example row of columns -->
+            <div>
+                <div class="row-fluid borders">
+                <div class="span4">
+                     <h2>Wisdom Comes With Winters</h2>
+
+                    <p>With over 35 years of experience in the greater Los Angeles county area, Palisades Painting offers professional craftsmanship for your home or business with unmatched quality.</p>
+                    <p>
+<br>
+<br>
+                    </p>
+                </div>
+                 <div class="span4">
+                     <h2>Anything's Possible</h2>
+
+                    <p>Our clients have been actors, policians, CEOs of Fortune 500 companies, and many more. We've done early stage development projects on houses worth over $25 million, as well as special projects for housing renovations.</p>
+                    <p>
+
+                    </p>
+                </div>
+                <div class="span4">
+                     <h2>Honesty and Beautiful Results</h2>
+
+                    <p>Working with a licensed and bonded engineer will ease your worries while you sit back and watch your wishes come to life.</p>
+                    <p><a class="btn" href="#">View details &raquo;</a>
+
+                    </p>
+                </div>
+            </div>                
+
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <!-- FOOTER -->
+                  <div>  	 
+					<hr>
+                    <div class="footer">
+                        <p>&copy; Palisades Paiting 2013</p>
+                    </div>
+					</div>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
+	<script src= "http://web.mit.edu/user/s/a/saulopez/www/bootstrap.min.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script> 
+</body>
+</html>
