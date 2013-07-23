@@ -22,16 +22,6 @@ elseif (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[
 // check that a message was entered
 elseif (empty ($message))
     $error = "You must enter a message.";
-    
-// check if an error was found - if there was, send the user back to the form
-if (isset($error)) {
-    header("Location: http://web.mit.edu/user/s/a/saulopez/www/contactalt.html?e=".urlencode($error)); exit;
-}
-    
-        if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
-  
-        // check for a form error  
-        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-error\">".$_GET['e']."</div>"; 
             
 // write the email content
 $email_content = "Name: $name\n";
@@ -39,7 +29,7 @@ $email_content .= "Email Address: $email_address\n";
 $email_content .= "Message:\n\n$message";
   
 // send the email
-mail ("saullopez23@aol.com", "New Web Message", $email_content);
+mail ("saullopez52@gmail.com", "New Web Message", $email_content);
   
 // send the user back to the form
 header("Location: http://web.mit.edu/user/s/a/saulopez/www/contactalt.html?s=".urlencode("Thank you for your message! We will do our best to get back to you within 24 hours :]")); exit;
