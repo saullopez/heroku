@@ -280,7 +280,7 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
                                 <li><a href="http://web.mit.edu/user/s/a/saulopez/www/about.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                                 <li><a href="http://web.mit.edu/user/s/a/saulopez/www/projects.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
-                                <li class="active"><a href="http://web.mit.edu/user/s/a/saulopez/www/contact.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <li class="active"><a href="http://web.mit.edu/user/s/a/saulopez/www/contactalt.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 
                                 </li>
                                 <li class="divider-vertical"></li>
@@ -288,49 +288,49 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
                         </div>
                     </div>
                 </div>
-                <!-- /.navbar -->
-<br>
             </div>
-</div>
-
-<!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit borders">
-        <h1 style="font-size: 3.5vw;">Give us a call, or send an email below!</h1>
-        <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodoelis euismod semper cursus.</p>
-      </div>
-<br>
-<hr class="rowcol container-fluid">
-<br>
-
-<!--Email form-->
-<div class="container-fluid">
-    <div style="padding: 30px 0 60px 0;" class="container-fluid rowcol">
-
-<table style="width: 100%;">
-  <tr>
-     <td style="text-align: center;">
-  <form>
-      <div class="controls controls-row" style="display: inline-block; text-align:center;">
-          <input id="name" name="name" type="text" class="span3" placeholder="Name"> 
-          <input id="email" name="email" type="email" class="span3" placeholder="Email address">
-      </div>
-      <div class="controls" style="padding-bottom: 10px;">
-          <textarea id="message" name="message" class="span6" placeholder="Your Message" rows="5"></textarea>
-      </div>
-      
-      <div class="controls pull-right" style="margin:0 21% 0 21%;">
-          <button id="contact-submit" type="submit" class="btn custom-btn pull-right">Send</button>
-      </div>
-  </form>
-</div>
-</div>
-</div class="container-fluid">
-     </td>
-  </tr>
-</table>
-</div>
-</div>
-
+                <!-- /.navbar -->
+	<div class="container-fluid">
+	
+        <div class="page-header">
+            <h1>Contact Us!</h1>
+        </div>
+<?php  
+  
+        // check for a successful form post  
+        if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
+  
+        // check for a form error  
+        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";  
+  
+?>
+<form method="POST" action="http://web.mit.edu/user/s/a/saulopez/www/contactformsubmission.php" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label" for="input1">Name</label>
+                <div class="controls">
+                    <input type="text" name="contact_name" id="input1" placeholder="Your name">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input2">Email Address</label>
+                <div class="controls">
+                    <input type="text" name="contact_email" id="input2" placeholder="Your email address">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input3">Message</label>
+                <div class="controls">
+                    <textarea name="contact_message" id="input3" rows="8" class="span5" placeholder="The message you want to send to me."></textarea>
+                </div>
+            </div>
+            <div class="form-actions">
+                <input type="hidden" name="save" value="contact">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+        
+    </div>
+        	
     <!-- Wrap the rest of the page in another container to center all the content. -->
     <div class="container-fluid marketing rowcol">
 
@@ -342,8 +342,9 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
                     </div>
 					</div>
 
-    </div>
-<!-- /.container -->
+    </div><!-- /.container -->
+
+
 
     <!-- Le javascript
     ================================================== -->
