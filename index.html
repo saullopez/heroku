@@ -28,6 +28,11 @@ if (isset($error)) {
     header("Location: http://web.mit.edu/user/s/a/saulopez/www/contactalt.html?e=".urlencode($error)); exit;
 }
     
+        if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
+  
+        // check for a form error  
+        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-error\">".$_GET['e']."</div>"; 
+            
 // write the email content
 $email_content = "Name: $name\n";
 $email_content .= "Email Address: $email_address\n";
@@ -53,11 +58,11 @@ header("Location: http://web.mit.edu/user/s/a/saulopez/www/contactalt.html?s=".u
     <link href="http://web.mit.edu/user/s/a/saulopez/www/stylesheet.css" rel="stylesheet">
 
     <style>
-      body {
-        margin-top: 3%;
-        margin-top: 60px;
-        max-width: 1300px;
-        }
+			body {
+				margin-top: 3%;
+				margin-top: 60px;
+				max-width: 1300px;
+				}
 
             /* Customize the navbar links to be fill the entire space of the .navbar */
             .navbar .navbar-inner {
@@ -87,7 +92,7 @@ header("Location: http://web.mit.edu/user/s/a/saulopez/www/contactalt.html?s=".u
     body {
       padding-bottom: 40px;
       background-color: #FAFAFA;
-    padding-top: 20px;
+	  padding-top: 20px;
       max-width: 1300px;
     }
 
@@ -174,8 +179,8 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
       margin: 0 5% 0 5%; /* Space out the Bootstrap <hr> more */
     }
     .featurette { 
-    background-color: white;
-    padding: 10px 10px 0 10px;
+	  background-color: white;
+	  padding: 10px 10px 0 10px;
       padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
       overflow: hidden; /* Vertically center images part 2: clear their floats. */
     }
@@ -194,11 +199,11 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
     /* Thin out the marketing headings */
     .featurette-heading {
       font-size: 50px;
-    color: #01AB8E;
+	  color: #01AB8E;
       font-weight: 300;
       line-height: 1;
       letter-spacing: -1px;
-    z-index: 10;
+	  z-index: 10;
     }
 
 
@@ -250,8 +255,8 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
         margin-right: -20px;*/
       }
       .carousel .container {
-    margin: 0 20% 0 20%;
-    z-index: 11;
+		margin: 0 20% 0 20%;
+		z-index: 11;
       }
       .carousel .item {
         height: 300px;
@@ -312,7 +317,7 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
     </a>
 <a class="brand" >&nbsp;&nbsp;Pali Painting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                             <!-- Everything you want hidden at 940px or less, place within here -->
-          <div class="nav-collapse collapse">
+					<div class="nav-collapse collapse">
                                 <!-- .nav, .navbar-search, .navbar-form, etc -->
                             <ul class="nav">
                                 <li class="divider-vertical"></li>
@@ -332,21 +337,12 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
                 </div>
             </div>
                 <!-- /.navbar -->
-  <div class="container-fluid">
-  
+	<div class="container-fluid">
+	
         <div class="page-header">
             <h1>Contact Us!</h1>
         </div>
-<?php  
-  
-        // check for a successful form post  
-        if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
-  
-        // check for a form error  
-        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";  
-  
-?>
-<form method="POST" class="form-horizontal">
+    <form method="POST" class="form-horizontal">
             <div class="control-group">
                 <label class="control-label" for="input1">Name</label>
                 <div class="controls">
@@ -372,17 +368,17 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
         </form>
         
     </div>
-          
+        	
     <!-- Wrap the rest of the page in another container to center all the content. -->
     <div class="container-fluid marketing rowcol">
 
       <!-- FOOTER -->
-                  <div>    
-          <hr>
+                  <div>  	 
+					<hr>
                     <div class="footer">
                         <p>&copy; Palisades Paiting 2013</p>
                     </div>
-          </div>
+					</div>
 
     </div><!-- /.container -->
 
@@ -404,10 +400,10 @@ hr {margin:20px 0;border:0;border-top:1px solid #eeeeee;border-bottom: 1px solid
     <script src="../assets/js/bootstrap-collapse.js"></script>
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.1.0.js"></script>
-  <script src= "http://web.mit.edu/user/s/a/saulopez/www/bootstrap.min.js"></script>
+	<script src= "http://web.mit.edu/user/s/a/saulopez/www/bootstrap.min.js"></script>
     <script>
       !function ($) {
         $(function(){
